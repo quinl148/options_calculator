@@ -39,9 +39,9 @@ else:
 
             # Plot stock price data
             fig = px.line(
-                data, x=data.index, y="Adj Close", 
+                data, x=data.index, y="Close", 
                 title=f"{company_name} ({ticker}) - Stock Price Over Time",
-                labels={"Adj Close": "Stock Price (USD)", "index": "Date"}
+                labels={"Close": "Stock Price (USD)", "index": "Date"}
             )
             st.plotly_chart(fig)
 
