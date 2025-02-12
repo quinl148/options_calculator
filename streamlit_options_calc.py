@@ -118,7 +118,7 @@ with long_call:
     lc_contract_payoff = lc_payoff * 100 
     total_call_premium_paid = call_premium_paid * 100
     stock_return = (stock_input - current_stock_price)/ current_stock_price * 100
-    lc_option_return = (((np.maximum((stock_input - strike_input) * 100, 0) - total_call_premium_paid) / total_call_premium_paid)  - 1 ) *100 
+    lc_option_return = (((np.maximum((stock_input - strike_input) * 100, 0) - total_call_premium_paid) / total_call_premium_paid)  ) *100 
     lc_price_needed = strike_input + call_premium_paid
     lc_stock_return_needed = (((lc_price_needed - current_stock_price)/current_stock_price) * 100)
 
@@ -162,7 +162,7 @@ with long_put:
     lp_contract_payoff = lp_payoff * 100 
     total_put_premium_paid = put_premium_paid * 100
     stock_return = (stock_input - current_stock_price)/ current_stock_price
-    lp_option_return = ((np.maximum((strike_input - stock_input) * 100, 0) - total_put_premium_paid) / total_put_premium_paid - 1)* 100
+    lp_option_return = ((np.maximum((strike_input - stock_input) * 100, 0) - total_put_premium_paid) / total_put_premium_paid )* 100
     lp_price_needed = strike_input - put_premium_paid
     lp_stock_return_needed = ((lp_price_needed - current_stock_price)/current_stock_price * 100)
 
